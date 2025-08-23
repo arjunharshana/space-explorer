@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA Space Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="background-blur"></div>
+    <div class="container">
+      <header>
+        <h1>Astronomy Picture of the Day</h1>
+      </header>
+
+      <main id="app">
+        <div id="loader" class="state-container" role="status">
+          <div class="spinner"></div>
+          <p>Fetching a part of the universe...</p>
+        </div>
+
+        <div id="error-message" class="state-container hidden" role="status">
+          <div id="error-icon"></div>
+          <p>Could not fetch the picture. Please try again later.</p>
+          <p id="error-details"></p>
+        </div>
+
+        <div id="content-wrapper" class="hidden">
+          <div class="media-container">
+            <img id="apod-image" src="" alt="" style="display: none" />
+            <iframe
+              id="apod-video"
+              src=""
+              frameborder="0"
+              allow="encrypted-media; picture-in-picture"
+              allowfullscreen
+              style="display: none"
+            ></iframe>
+          </div>
+          <div id="text-content" class="content-padding" aria-live="polite">
+            <h2 id="apod-title"></h2>
+            <p id="apod-date"></p>
+            <p id="apod-explanation"></p>
+          </div>
+        </div>
+
+        <div id="navigation" class="hidden">
+          <button
+            id="prev-btn"
+            class="nav-btn"
+            aria-label="View previous day's picture"
+          >
+            Previous
+          </button>
+          <button id="today-btn" class="nav-btn">Today</button>
+          <button
+            id="next-btn"
+            class="nav-btn"
+            aria-label="View next day's picture"
+          >
+            Next
+          </button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
