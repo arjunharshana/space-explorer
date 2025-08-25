@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         year: "numeric",
         month: "long",
         day: "numeric",
-        timeZone: "Asia/Kolkata",
+        timeZone: "UTC",
       }
     );
     dom.explanation.textContent = explanation;
